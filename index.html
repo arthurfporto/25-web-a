@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <p>
+  <p id="some-paragraph">
     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam distinctio hic doloremque, deserunt est consectetur
     quia delectus fugiat temporibus dignissimos beatae perferendis expedita inventore, necessitatibus id aliquid cumque
     error? Sit!
@@ -23,6 +23,17 @@
     <li> Item 2</li>
     <li> Item 3</li>
   </ul>
+
+  <script>
+    var p = document.getElementById('some-paragraph');
+    p.addEventListener('mouseenter', function (event) {
+      p.innerHTML = 'Entrei';
+    });
+
+    p.addEventListener('mouseout', function (event) {
+      p.innerHTML = 'Saí';
+    });
+  </script>
 
 </body>
 
